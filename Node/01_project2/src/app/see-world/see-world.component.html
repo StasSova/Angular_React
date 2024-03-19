@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+    <!-- Итерация по каждому разделу статей -->
+    <div class="section" *ngFor="let section of articles">
+      <!-- Вывод названия раздела -->
+      <h2>{{ section.title }}</h2>
+      <!-- Итерация по каждой статье в разделе -->
+      <div class="articles">
+        <div class="article" *ngFor="let article of section.images">
+          <!-- Вывод изображение статьи -->
+          <img [src]="article.src" alt="image" />
+          <!-- Вывод заголовка статьи -->
+          <h3>{{ article.title }}</h3>
+          <!-- Вывод текста статьи -->
+          <p *ngIf="article.text">{{ article.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
