@@ -1,0 +1,45 @@
+<!-- <button *ngIf="isShow" (click)="toggleCollapse()">+</button>
+<button *ngIf="!isShow" (click)="toggleCollapse()">-</button>
+<div *ngIf="!isShow">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, minima
+    distinctio dignissimos amet temporibus architecto enim recusandae voluptas
+    autem itaque! Aut, iusto quidem? Laudantium eius placeat voluptas inventore
+    porro nulla?
+  </p>
+</div> -->
+
+<div class="container">
+  <div class="menu">
+    <button (click)="isBoldToggle()">B</button>
+    <button (click)="isItalicToggle()">I</button>
+    <button (click)="isUnderlineToggle()">U</button>
+    <button (click)="isUppercaseToggle()">Tt</button>
+    <select name="" id="sel_fontSize">
+      <!-- (change)="changeTextSize($event.target.value)" -->
+      <option value="12" selected>12</option>
+      <option value="14">14</option>
+      <option value="16">16</option>
+      <option value="18">18</option>
+    </select>
+    <select name="" id="sel_fontFamily">
+      <option value="Verdana" selected>Verdana</option>
+    </select>
+  </div>
+  <textarea
+    [ngClass]="{
+      ta_bold: isBold,
+      ta_italic: isItalic,
+      ta_upper: isUppercase,
+      ta_under: isUnderline
+    }"
+    name=""
+    id=""
+    cols="30"
+    rows="10"
+    [ngStyle]="{ 'font-size': fontSize }"
+  >
+    Hello world
+    </textarea
+  >
+</div>

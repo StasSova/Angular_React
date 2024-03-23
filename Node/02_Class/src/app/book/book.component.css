@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+}
+
+.books-column {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sm_book {
+  cursor: pointer;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-size: cover; /* Масштабирование фонового изображения для заполнения блока */
+  background-position: center; /* Выравнивание фонового изображения по центру */
+  background-color: #fff;
+}
+
+.sm_book:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.book-image {
+  max-width: 80%;
+  max-height: 450px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-image:hover {
+  transform: scale(1.05);
+}
+
+.details-column {
+  padding: 20px;
+}
+
+.book-details {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.book-detail {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #333;
+}

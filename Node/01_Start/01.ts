@@ -112,3 +112,19 @@ let g2: Gallery = {
     console.log(`Title: ${this.title},  Quantity ${this.item}`);
   },
 };
+
+const color = {
+  second: "321",
+  primary: "123",
+};
+
+enum color2 {
+  red = "fds",
+  blue = "fads",
+  green = "fsa",
+}
+
+const user = {
+  nama: "Maya",
+  color: color2.green,
+};

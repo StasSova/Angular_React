@@ -1,0 +1,42 @@
+<h1>Books</h1>
+<div class="container">
+  <div class="column books-column">
+    <div
+      class="sm_book"
+      (click)="changeBook(id)"
+      *ngFor="let book of books; let id = index"
+      [style.background-image]="'url(' + book.image + ')'"
+    >
+      <h2>{{ book.title }}</h2>
+      <p>{{ book.author }}</p>
+    </div>
+  </div>
+
+  <div class="column details-column">
+    <div class="img-box">
+      <img
+        *ngIf="selectedBook.image"
+        [src]="selectedBook.image"
+        alt="image"
+        class="book-image"
+      />
+    </div>
+    <div class="book-details">
+      <p *ngIf="selectedBook.title" class="book-detail">
+        <span class="detail-label">Title:</span> {{ selectedBook.title }}
+      </p>
+      <p *ngIf="selectedBook.author" class="book-detail">
+        <span class="detail-label">Author:</span> {{ selectedBook.author }}
+      </p>
+      <p *ngIf="selectedBook.year" class="book-detail">
+        <span class="detail-label">Year:</span> {{ selectedBook.year }}
+      </p>
+      <p *ngIf="selectedBook.price" class="book-detail">
+        <span class="detail-label">Price:</span> {{ selectedBook.price }}
+      </p>
+      <p *ngIf="selectedBook.rating" class="book-detail">
+        <span class="detail-label">Rating:</span> {{ selectedBook.rating }}
+      </p>
+    </div>
+  </div>
+</div>
