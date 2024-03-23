@@ -10,9 +10,10 @@ import { TestClassComponent } from './test-class/test-class.component';
 import { BookComponent } from './book/book.component';
 
 import { FormsModule } from '@angular/forms';
+import { PhoneComponent } from './phone/phone.component';
 
 @NgModule({
-  declarations: [AppComponent, TestClassComponent, BookComponent],
+  declarations: [AppComponent, TestClassComponent, BookComponent, PhoneComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
