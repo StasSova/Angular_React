@@ -1,0 +1,41 @@
+.card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background: #f0f0f0;
+  box-shadow: 5px 5px 15px #c7c7c7, -5px -5px 15px #ffffff; /* Neumorphism effect */
+}
+
+.card img {
+  width: 40%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Spacing between image and text */
+  border-radius: 10px; /* Make the image slightly rounded */
+}
+
+.info {
+  flex: 1; /* Take remaining space */
+}
+
+.description {
+  display: flex;
+  margin-bottom: 10px; /* Spacing between description sections */
+}
+
+.label {
+  font-weight: bold;
+  width: 120px; /* Width for label section */
+}
+
+.value {
+  margin-left: 10px; /* Spacing between label and value */
+}
+
+.foods {
+  display: flex;
+}
+
+.food {
+  margin-right: 10px; /* Spacing between food items */
+}

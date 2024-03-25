@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="column">
+    <!-- Pet collection -->
+    <div *ngFor="let pet of pets" class="pet" (click)="changePet(pet)">
+      <img src="{{ pet.photo }}" alt="Image" />
+      <p>{{ pet.name }}</p>
+    </div>
+  </div>
+  <!-- Selected pet -->
+  <div class="column">
+    <app-pet-detail
+      *ngIf="selectedPet"
+      [selectedPet]="selectedPet"
+    ></app-pet-detail>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+.pet {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  background: #f0f0f0;
+  box-shadow: 5px 5px 15px #c7c7c7, -5px -5px 15px #ffffff; /* Neumorphism effect */
+  transition: all 0.3s ease;
+}
+
+.pet:hover {
+  transform: translateY(-5px);
+}
+
+.pet img {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.pet p {
+  font-size: 16px;
+  font-weight: bold;
+}

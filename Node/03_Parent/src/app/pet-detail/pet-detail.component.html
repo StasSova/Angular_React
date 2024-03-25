@@ -1,0 +1,25 @@
+<div class="card">
+  <img [src]="selectedPet?.photo" alt="imagePet" />
+  <div class="info">
+    <div class="description" *ngIf="selectedPet?.name">
+      <p class="label">Name:</p>
+      <p class="value">{{ selectedPet?.name }}</p>
+    </div>
+    <div class="description" *ngIf="selectedPet?.species">
+      <p class="label">Species:</p>
+      <p class="value">{{ selectedPet?.species }}</p>
+    </div>
+    <div class="description" *ngIf="selectedPet?.favFoods">
+      <p class="label">Favorite Foods:</p>
+      <div class="foods">
+        <p *ngFor="let food of selectedPet?.favFoods" class="food">
+          {{ food }}
+        </p>
+      </div>
+    </div>
+    <div class="description" *ngIf="selectedPet?.birthYear">
+      <p class="label">Age:</p>
+      <p class="value">{{ getAge() }}</p>
+    </div>
+  </div>
+</div>
