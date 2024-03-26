@@ -1,0 +1,39 @@
+.item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.item h2 {
+  margin: 0;
+}
+
+.item p {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.remove {
+  padding: 5px 10px;
+  border: 1px solid #2b0060;
+  background-color: #ed1212;
+  color: #ffffff;
+}
+
+.remove:hover {
+  background-color: #e53030;
+}
+
+.add {
+  padding: 5px 10px;
+  border: 1px solid #ffdd00;
+  background-color: #008a00;
+  color: #ffffff;
+}
+
+.add:hover {
+  background-color: #01a701;
+}

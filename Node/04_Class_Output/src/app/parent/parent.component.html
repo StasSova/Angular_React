@@ -1,0 +1,30 @@
+<!-- 
+  <p>описание условий акции</p>
+  <p>Количество кликов {{ clicks }}</p>
+  <p>Всего товаров {{ getQuantity() }}</p> 
+-->
+
+<h1>Продукция магазина</h1>
+<div class="container">
+  <div class="shop-cart column">
+    <div *ngIf="selectedProducts.length > 0">
+      <div *ngFor="let item of selectedProducts" class="selected-item">
+        {{ item.name }} - {{ item.quantity }} шт. price:
+        {{ item.quantity * item.price }}
+      </div>
+    </div>
+    <div class="total-price">
+      <p>Итого: {{ getTotalPrice() }}$</p>
+    </div>
+  </div>
+  <div class="column">
+    <div *ngFor="let product of products; let ind = index">
+      <app-child
+        [product]="product"
+        [isInCart]="isInCart(product.name)"
+        (addToCart)="addToCart(ind)"
+        (removeFromCart)="removeFromCart(ind)"
+      ></app-child>
+    </div>
+  </div>
+</div>

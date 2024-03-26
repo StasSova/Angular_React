@@ -1,0 +1,11 @@
+<div class="item">
+  <h2>{{ product.name }}</h2>
+  <p>price: {{ product.price }}$</p>
+  <p>stock: {{ product.quantity }}</p>
+  <button *ngIf="isInCart" (click)="removeFromCart.emit()" class="remove">
+    -
+  </button>
+  <button *ngIf="product.quantity !== 0" (click)="addToCart.emit()" class="add">
+    +
+  </button>
+</div>

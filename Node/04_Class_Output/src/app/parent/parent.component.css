@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  padding: 0 10px;
+}
+
+.shop-cart {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.selected-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.total-price {
+  margin-top: 10px;
+}
+
+.total-price p {
+  margin: 0;
+}
+
+/* Стили для списка товаров */
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+/* Стили для кнопок */
+button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
