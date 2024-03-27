@@ -1,0 +1,40 @@
+<div class="col-md-8">
+  <ul class="list-group">
+    <li class="list-group-item" style="padding: 15px">
+      <div class="d-flex align-items-center">
+        <div class="mr-3" style="margin-right: 25px">
+          <img
+            src="https://images.unsplash.com/photo-1711476326429-3b3e6083fd54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D"
+            alt="User Photo"
+            class="rounded-circle"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+        <div>
+          <span style="font-size: 18px; font-weight: bold">{{
+            user.name
+          }}</span>
+          <br />
+          <span>Salary: {{ user.salary | currency }}</span>
+          <br />
+          <span>Date: {{ user.date | date }}</span>
+          <br />
+          <button
+            type="button"
+            class="btn btn-warning btn-sm mt-2"
+            (click)="editCommand.emit(user)"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger btn-sm mt-2"
+            (click)="deleteCommand.emit(user)"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
