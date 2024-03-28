@@ -1,0 +1,53 @@
+<h1>University</h1>
+<div class="container">
+  <div class="column">
+    <!-- sorting -->
+    <div class="row">
+      <h2>Sorting</h2>
+      <button (click)="sortByCapacity()">Sort by Capacity</button>
+      <button (click)="sortByName()">Sort by Name</button>
+
+      <select [(ngModel)]="selectedGroup">
+        <option *ngFor="let group of groups" [ngValue]="group">
+          {{ group.name }}
+        </option>
+      </select>
+
+      <select [(ngModel)]="selectedFaculty">
+        <option value="all">All Faculties</option>
+        <option *ngFor="let faculty of faculties" [ngValue]="faculty">
+          {{ faculty }}
+        </option>
+      </select>
+    </div>
+    <!-- data -->
+    <div class="row">
+      <ng-container
+        *ngIf="
+          (
+            audiences
+            | filter : selectedGroup
+            | filterByFaculty : selectedFaculty
+          ).length > 0;
+          else noAudiences
+        "
+      >
+        <div
+          class="row"
+          *ngFor="
+            let aud of audiences
+              | filter : selectedGroup
+              | filterByFaculty : selectedFaculty;
+            let i = index
+          "
+        >
+          <app-audience-comp [audience]="aud"></app-audience-comp>
+        </div>
+      </ng-container>
+
+      <ng-template #noAudiences>
+        <p>No audiences found.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

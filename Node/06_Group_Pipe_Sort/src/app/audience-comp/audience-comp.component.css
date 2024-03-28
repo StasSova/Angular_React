@@ -1,0 +1,36 @@
+.audience-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.audience-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.audience-info {
+  color: #333;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.audience-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.audience-faculty {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.audience-capacity {
+  font-size: 1rem;
+  margin: 5px 0;
+}

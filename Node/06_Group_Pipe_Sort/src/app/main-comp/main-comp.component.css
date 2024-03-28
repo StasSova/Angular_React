@@ -1,0 +1,52 @@
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#toggle-theme {
+  position: fixed;
+  top: 35px;
+  right: 35px;
+}
+
+.container button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-inline: 8px;
+}

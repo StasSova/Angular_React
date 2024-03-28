@@ -1,0 +1,35 @@
+.group-card {
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Уменьшаем радиус закругления углов */
+  margin-bottom: 10px; /* Уменьшаем отступ между карточками */
+  padding: 10px; /* Уменьшаем внутренний отступ */
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Уменьшаем тень */
+}
+
+.group-card-header {
+  margin-bottom: 5px; /* Уменьшаем отступ между заголовком и остальным контентом */
+}
+
+.group-card-header h2 {
+  font-size: 1.2rem; /* Уменьшаем размер заголовка */
+  margin: 0;
+}
+
+.group-card-header p {
+  font-size: 0.8rem; /* Уменьшаем размер текста */
+  margin: 2px 0; /* Уменьшаем отступы */
+}
+
+.group-card-body {
+  font-size: 1rem; /* Уменьшаем размер текста */
+}
+
+.group-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Уменьшаем тень при наведении */
+}
+
+.group-card:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Уменьшаем тень при клике */
+  transform: translateY(0.5px); /* Уменьшаем высоту при клике */
+}

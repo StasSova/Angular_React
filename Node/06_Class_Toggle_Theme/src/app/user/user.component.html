@@ -1,0 +1,9 @@
+<input type="text" placeholder="Search string" [(ngModel)]="search" />
+<div
+  class="user"
+  *ngFor="let user of users | filter : search : 'name'; let i = index"
+>
+  <div class="row">
+    <h2>{{ user.name }}, age: {{ user.age }}</h2>
+  </div>
+</div>
