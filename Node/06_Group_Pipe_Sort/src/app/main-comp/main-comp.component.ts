@@ -26,11 +26,11 @@ export class MainCompComponent {
     ];
 
     this.audiences = [
-      new Audience('Auditorium 101', 50, 'Engineering Faculty'),
-      new Audience('Auditorium 102', 40, 'Computer Science Faculty'),
-      new Audience('Auditorium 103', 35, 'Mathematics Faculty'),
-      new Audience('Auditorium 104', 30, 'Physics Faculty'),
-      new Audience('Auditorium 105', 25, 'Biology Faculty'),
+      new Audience('A Auditorium 101', 25, 'Engineering Faculty'),
+      new Audience('B Auditorium 102', 20, 'Computer Science Faculty'),
+      new Audience('E Auditorium 103', 20, 'Mathematics Faculty'),
+      new Audience('C Auditorium 104', 14, 'Physics Faculty'),
+      new Audience('D Auditorium 105', 19, 'Biology Faculty'),
     ];
 
     this.faculties = this.audiences.map((x) => x.faculty);

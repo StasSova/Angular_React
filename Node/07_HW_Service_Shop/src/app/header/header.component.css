@@ -1,0 +1,30 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  justify-content: space-between;
+}
+
+.my-shop-button {
+  font-size: 24px; /* Установка большего шрифта */
+  color: white; /* Установка цвета текста */
+  background-color: transparent; /* Прозрачный фон */
+  border: none; /* Удаление границы */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+  font-weight: bold; /* Жирный шрифт */
+}
+
+.my-shop-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Изменение фона при наведении */
+  color: #ffffff; /* Изменение цвета текста при наведении */
+}
+
+.cart {
+  margin-inline: 16px;
+}
+
+.admin {
+  margin: 0;
+  padding: 0;
+}

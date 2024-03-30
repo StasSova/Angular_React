@@ -1,0 +1,23 @@
+<mat-toolbar class="header" color="primary">
+  <button mat-button class="my-shop-button" (click)="goToShop()">
+    My Shop
+  </button>
+
+  <div class="container">
+    <!-- Кнопка для перехода в режим администратора -->
+    <button class="admin" mat-raised-button (click)="goToAdmin()">
+      <mat-icon>settings</mat-icon>
+    </button>
+
+    <!-- Кнопка с бейджем и переходом на страницу корзины -->
+    <button
+      class="cart"
+      mat-raised-button
+      matBadgeColor="warn"
+      [matBadge]="getCountItemInCart()"
+      (click)="goToCart()"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

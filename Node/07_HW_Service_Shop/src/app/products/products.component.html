@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Shop</h1>
+  <div class="grid-wrapper">
+    <app-product
+      *ngFor="let prod of products"
+      [product]="prod"
+      (addToCart)="addItem($event)"
+    ></app-product>
+  </div>
+</div>

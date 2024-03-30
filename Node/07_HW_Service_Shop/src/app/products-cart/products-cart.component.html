@@ -1,0 +1,23 @@
+<div class="grid-container">
+  <div class="header">
+    <h1>Shopping Cart</h1>
+  </div>
+  <div class="content">
+    <app-product-cart
+      *ngFor="let prod of products"
+      [product]="prod"
+      (addCount)="onAdd($event)"
+      (remCount)="onRem($event)"
+    ></app-product-cart>
+  </div>
+
+  <!-- Общая стоимость всех товаров -->
+  <div class="total">
+    <p>Total: {{ calculateTotal() | currency }}</p>
+  </div>
+
+  <!-- Кнопка купить -->
+  <div class="buy-button">
+    <button mat-raised-button color="primary">Buy Now</button>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.grid-container {
+  margin: 5% 15%; /* Центрирование по горизонтали */
+}
+
+.total {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right; /* Выравнивание текста по правому краю */
+}
+
+.buy-button {
+  text-align: right; /* Выравнивание текста по правому краю */
+}
+
+.buy-button button {
+  background-color: green; /* Зеленый цвет кнопки купить */
+  color: white; /* Белый цвет текста кнопки */
+  padding: 12px 24px; /* Увеличение размера кнопки */
+  font-size: 16px; /* Увеличение размера текста кнопки */
+}

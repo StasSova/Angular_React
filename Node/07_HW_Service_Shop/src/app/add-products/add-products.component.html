@@ -1,0 +1,74 @@
+<div class="container">
+  <h1>Product Management</h1>
+
+  <div class="addContainer">
+    <!-- Форма для добавления нового продукта -->
+    <div class="addForm">
+      <mat-form-field class="formField">
+        <mat-label>Product Name</mat-label>
+        <input
+          matInput
+          placeholder="Enter product name"
+          [(ngModel)]="newProduct.name"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="formField">
+        <mat-label>Image URL</mat-label>
+        <input
+          matInput
+          placeholder="Enter image URL"
+          [(ngModel)]="newProduct.image"
+        />
+      </mat-form-field>
+
+      <div class="formField">
+        <mat-form-field>
+          <mat-label>Price</mat-label>
+          <input
+            matInput
+            type="number"
+            placeholder="Enter price"
+            [(ngModel)]="newProduct.price"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Quantity</mat-label>
+          <input
+            matInput
+            type="number"
+            placeholder="Enter quantity"
+            [(ngModel)]="newProduct.quantity"
+          />
+        </mat-form-field>
+      </div>
+
+      <button
+        class="addButton"
+        mat-raised-button
+        color="primary"
+        (click)="onAddProduct()"
+      >
+        Add Product
+      </button>
+      <button
+        [disabled]="newProduct.id === -1"
+        class="addButton"
+        mat-raised-button
+        color="primary"
+        (click)="onSaveProduct()"
+      >
+        Save Product
+      </button>
+    </div>
+  </div>
+
+  <div class="item-container">
+    <app-add-product
+      *ngFor="let prod of products"
+      [product]="prod"
+      (onRemove)="onRemove($event)"
+      (onEdit)="onEdit($event)"
+    ></app-add-product>
+  </div>
+</div>
