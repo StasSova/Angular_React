@@ -1,0 +1,73 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.has-error {
+  color: red;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+}
+
+.invalid {
+  color: red;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+}
+
+.radio {
+  margin-right: 20px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn:disabled {
+  background-color: gray;
+}
+
+input.ng-touched {
+  border: 3px solid blue;
+}
+
+input.ng-invalid {
+  border-color: red;
+}
+
+input.ng-dirty {
+  border-color: orange;
+}
+
+input.ng-valid {
+  border-color: green;
+}

@@ -1,0 +1,84 @@
+<div class="container">
+  <form (ngSubmit)="submitForm(form)" #form="ngForm">
+    <div
+      class="form-group"
+      [ngClass]="{ 'has-error': email.invalid && email.touched }"
+    >
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        ngModel
+        placeholder="Email"
+        class="form-control"
+        email
+        #email="ngModel"
+      />
+      @if (email.invalid && email.touched) {
+      <p class="invalid">Error</p>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="pass">Password:</label>
+      <input
+        type="password"
+        id="pass"
+        name="password"
+        ngModel
+        placeholder="Password"
+        pattern="\w{4,10}"
+        class="form-control"
+        #pass="ngModel"
+        required
+      />
+      @if (pass.invalid && pass.touched) {
+      <p class="invalid">Incorrect password</p>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="pass2">Password:</label>
+      <input
+        #pass2="ngModel"
+        id="pass2"
+        name="password2"
+        type="password"
+        ngModel
+        placeholder="Password"
+        class="form-control"
+        required
+      />
+      @if (pass2.touched && pass.value !== pass2.value) {
+      <p class="invalid">Password is not equals</p>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="lang">Language:</label>
+      <select id="lang" name="lang" ngModel class="form-control">
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Answer:</label>
+      <div class="radio" *ngFor="let answer of answers">
+        <input type="radio" name="answ" ngModel [value]="answer.type" />
+        {{ answer.text }}
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="!form.valid || pass.value != pass2.value"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
+  </form>
+</div>

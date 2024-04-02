@@ -1,0 +1,128 @@
+<div class="main">
+  <div class="registration-container">
+    <form (ngSubmit)="registerUser()" #form="ngForm">
+      <!-- EMAIL -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          ngModel
+          #email="ngModel"
+          required
+          placeholder="example@gmail.com"
+        />
+        <div *ngIf="email.invalid && email.touched" class="error-message">
+          Invalid email format
+          <!-- <ng-container [ngSwitch]="true">
+            <p *ngSwitchCase="email.errors?.required">Email is required</p>
+            <p *ngSwitchCase="email.errors?.email">Invalid email format</p>
+          </ng-container> -->
+        </div>
+      </div>
+      <!-- USERNAME -->
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          type="text"
+          name="username"
+          ngModel
+          #username="ngModel"
+          required
+          appUsername
+          placeholder="Username"
+        />
+        <div *ngIf="username.invalid && username.touched" class="error-message">
+          <div
+            *ngIf="username.invalid && username.touched"
+            class="error-message"
+          >
+            <p *ngIf="username.errors && username.errors['required']">
+              Username is required
+            </p>
+            <p *ngIf="username.errors && username.errors['usernameLength']">
+              Username must be at least 6 characters long
+            </p>
+            <p *ngIf="username.errors && username.errors['usernameFormat']">
+              Username must contain only letters, numbers, hyphens, and
+              underscores
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- PASSWORD -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          ngModel
+          #password="ngModel"
+          required
+          appPassword
+          placeholder="********"
+        />
+        <div *ngIf="password.invalid && password.touched" class="error-message">
+          <div
+            *ngIf="password.invalid && password.touched"
+            class="error-message"
+          >
+            <p *ngIf="password.errors && password.errors['required']">
+              Please confirm your password
+            </p>
+            <p *ngIf="password.errors && password.errors['passwordLength']">
+              Password must be at least 8 characters long
+            </p>
+            <p *ngIf="password.errors && password.errors['passwordComplexity']">
+              Password must contain at least one uppercase letter, one lowercase
+              letter, one number, and one special character
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- CONFIRM PASSWORD -->
+      <div class="form-group">
+        <label for="confirmPassword">Repeat Password</label>
+        <input
+          id="confirmPassword"
+          type="password"
+          name="confirmPassword"
+          ngModel
+          #confirmPassword="ngModel"
+          required
+          appPasswordMatch="password"
+          placeholder="********"
+        />
+        <div
+          *ngIf="confirmPassword.invalid && confirmPassword.touched"
+          class="error-message"
+        >
+          <div
+            *ngIf="confirmPassword.invalid && confirmPassword.touched"
+            class="error-message"
+          >
+            <p
+              *ngIf="
+                confirmPassword.errors && confirmPassword.errors['required']
+              "
+            >
+              Please confirm your password
+            </p>
+            <p
+              *ngIf="
+                confirmPassword.errors &&
+                confirmPassword.errors['passwordMismatch']
+              "
+            >
+              Passwords must match
+            </p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!form.valid">Register</button>
+    </form>
+  </div>
+</div>
