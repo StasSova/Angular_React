@@ -9,16 +9,16 @@ import { Product } from '../interfaces';
   styleUrl: './products-cart.component.css',
 })
 export class ProductsCartComponent implements OnInit {
-  products: Product[];
+  products!: Product[];
 
   displayedColumns: string[] = ['position', 'name', 'price', 'quantity'];
   constructor(
     private cart: ShopCartService,
     private productService: ProductsService
-  ) {
+  ) {}
+  ngOnInit(): void {
     this.products = this.cart.productsInCart;
   }
-  ngOnInit(): void {}
 
   calculateTotal() {
     return this.cart.getTotalCost();

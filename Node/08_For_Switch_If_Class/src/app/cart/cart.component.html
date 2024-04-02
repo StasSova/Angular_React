@@ -1,0 +1,10 @@
+<h3>Cart</h3>
+
+@for (item of items; track $index) {
+<div class="cart-item">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div>
+} @empty{
+<h1>Cart is empty</h1>
+}

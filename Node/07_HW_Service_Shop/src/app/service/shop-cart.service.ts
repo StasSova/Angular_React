@@ -14,7 +14,8 @@ export class ShopCartService {
     if (existingProductIndex !== -1) {
       this.productsInCart[existingProductIndex].quantity++;
     } else {
-      this.productsInCart.push({ ...product, quantity: 1 });
+      this.productsInCart.push(product);
+      //
     }
   }
   removeProduct(product: Product) {
