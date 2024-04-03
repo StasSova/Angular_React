@@ -1,0 +1,292 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="user-container" formGroupName="user">
+      <h2>Контактные данные:</h2>
+      <hr />
+      <!-- PHONE -->
+      <div class="form-group">
+        <label for="phone">Номер телефона:</label>
+        <input
+          [ngClass]="{
+            invalid:
+              form.get('user.phone')?.invalid && form.get('user.phone')?.touched
+          }"
+          type="text"
+          id="phone"
+          formControlName="phone"
+          class="form-control"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('user.phone')?.invalid && form.get('user.phone')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Ваше имя:</label>
+        <input
+          [ngClass]="{
+            invalid:
+              form.get('user.name')?.invalid && form.get('user.name')?.touched
+          }"
+          type="text"
+          id="name"
+          formControlName="name"
+          class="form-control"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('user.name')?.invalid && form.get('user.name')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+
+      <!-- SURNAME -->
+      <div class="form-group">
+        <label for="surname">Ваша фамилия:</label>
+        <input
+          [ngClass]="{
+            invalid:
+              form.get('user.surname')?.invalid &&
+              form.get('user.surname')?.touched
+          }"
+          type="text"
+          id="surname"
+          formControlName="surname"
+          class="form-control"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('user.surname')?.invalid &&
+            form.get('user.surname')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+
+      <!-- SURNAME 2 -->
+      <div class="form-group">
+        <label for="surname2">Ваше отчество:</label>
+        <input
+          [ngClass]="{
+            invalid:
+              form.get('user.surname2')?.invalid &&
+              form.get('user.surname2')?.touched
+          }"
+          type="text"
+          id="surname2"
+          formControlName="surname2"
+          class="form-control"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('user.surname2')?.invalid &&
+            form.get('user.surname2')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="form-group">
+        <label for="email">Электронный адрес: </label>
+        <input
+          [ngClass]="{
+            invalid:
+              form.get('user.email')?.invalid && form.get('user.email')?.touched
+          }"
+          type="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('user.email')?.invalid && form.get('user.email')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="delivery-container"
+      formGroupName="delivery"
+      [ngClass]="{ 'disable-cont': form.get('user')?.invalid }"
+      [attr.disabled]="form.get('user')?.invalid ? true : null"
+    >
+      <h2>Данные для доставки:</h2>
+      <hr />
+
+      <!-- DELIVERY TYPE-->
+      <div class="form-group">
+        <label for="deliveryType">Тип доставки</label>
+        <select
+          id="deliveryType"
+          formControlName="type"
+          class="form-control"
+          [ngClass]="{
+            invalid:
+              form.get('delivery.type')?.invalid &&
+              form.get('delivery.type')?.touched
+          }"
+        >
+          @for (del of deliveryTypes; track $index) {
+          <option value="{{ del.value }}">{{ del.title }}</option>
+          }
+          <!-- Options for delivery types -->
+        </select>
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('delivery.type')?.invalid &&
+            form.get('delivery.type')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+
+      <!-- CITY -->
+      <div class="form-group">
+        <label for="city">Город:</label>
+        <input
+          [ngClass]="{
+            invalid:
+              form.get('delivery.city')?.invalid &&
+              form.get('delivery.city')?.touched
+          }"
+          type="text"
+          id="city"
+          formControlName="city"
+          class="form-control"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('delivery.city')?.invalid &&
+            form.get('delivery.city')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+
+      <!-- STREET -->
+      <div class="form-group">
+        <label for="street">Улица:</label>
+        <input
+          [ngClass]="{
+            invalid:
+              form.get('delivery.street')?.invalid &&
+              form.get('delivery.street')?.touched
+          }"
+          type="text"
+          id="street"
+          formControlName="street"
+          class="form-control"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('delivery.street')?.invalid &&
+            form.get('delivery.street')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+
+      <!-- DEPARTMENT -->
+      <div class="form-group">
+        <label for="department">Отделение:</label>
+        <input
+          [ngClass]="{
+            invalid:
+              form.get('delivery.department')?.invalid &&
+              form.get('delivery.department')?.touched
+          }"
+          type="number"
+          id="department"
+          formControlName="department"
+          class="form-control"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('delivery.department')?.invalid &&
+            form.get('delivery.department')?.touched
+          "
+        >
+          Поле обязательно для заполнения
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="confirmation-container"
+      formGroupName="confirmation"
+      [ngClass]="{ 'disable-cont': form.get('delivery')?.invalid }"
+      [attr.disabled]="form.get('delivery')?.invalid ? true : null"
+    >
+      <h2>Заказ:</h2>
+      <hr />
+
+      <div class="form-group">
+        <label for="confirm">Подтвердить</label>
+        <input
+          type="checkbox"
+          id="confirm"
+          formControlName="confirm"
+          [ngClass]="{
+            invalid:
+              form.get('confirmation.confirm')?.invalid &&
+              form.get('confirmation.confirm')?.touched
+          }"
+        />
+        <p
+          class="error-text"
+          *ngIf="
+            form.get('confirmation.confirm')?.invalid &&
+            form.get('confirmation.confirm')?.touched
+          "
+        >
+          Необходимо подтвердить
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="confirmation-container"
+      [ngClass]="{ 'disable-cont': form.get('confirmation')?.invalid }"
+      [attr.disabled]="form.get('confirmation')?.invalid ? true : null"
+    >
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="!form.valid">Отправить</button>
+    </div>
+  </form>
+
+  <hr />
+
+  @if (isSubmitted) {
+  <div>
+    <pre>
+            {{ formData | json }}
+        </pre
+    >
+  </div>
+  }
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+// import { Form, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,18 +7,22 @@ import { NgForm } from '@angular/forms';
   styleUrl: './form.component.css',
 })
 export class FormComponent {
-  answers = [
-    {
-      type: 'yes',
-      text: 'Да',
-    },
-    {
-      type: 'no',
-      text: 'Нет',
-    },
-  ];
-
-  submitForm(form: NgForm) {
-    console.log(form);
-  }
+  // answers = [
+  //   {
+  //     type: 'yes',
+  //     text: 'Да',
+  //   },
+  //   {
+  //     type: 'no',
+  //     text: 'Нет',
+  //   },
+  // ];
+  // defaultAnswer: string = 'yes';
+  // defaultLang: string = 'en';
+  // formData = {};
+  // isSubmitted: boolean = false;
+  // submitForm(form: NgForm) {
+  //   this.isSubmitted = true;
+  //   this.formData = form.value;
+  // }
 }
