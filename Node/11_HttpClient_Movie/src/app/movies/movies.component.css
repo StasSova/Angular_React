@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+}
+
+.movie-type-select {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ced4da; /* добавленная граница */
+  border-radius: 4px; /* скругление углов */
+}
+
+.movie-type-select:focus {
+  outline: none; /* убираем фокусовую обводку */
+  border-color: #80bdff; /* изменение цвета границы при фокусе */
+}
+
+.movie-type-select option {
+  padding: 5px;
+}
+
+.search-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* скругление углов */
+  cursor: pointer;
+  transition: background-color 0.3s; /* плавное изменение цвета фона при наведении */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* изменение цвета фона при наведении */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.movie-type-select {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.movie-title-input {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.search-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-item {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+}
+
+.movie-details {
+  padding: 10px;
+}
+
+.movie-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.movie-year,
+.movie-type {
+  margin: 0;
+  font-size: 14px;
+}
+
+.movie-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.movie-det {
+  display: block;
+  flex: 3;
+  padding: 24px;
+}

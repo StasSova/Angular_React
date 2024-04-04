@@ -1,0 +1,9 @@
+@if (users) { @for (item of users | async; track $index) {
+<div class="item">
+  <p>{{ item.name }}</p>
+  <p>{{ item.username }}</p>
+  <p>{{ item.email }}</p>
+  <p>{{ item.address.street }}</p>
+  <p>{{ item.phone }}</p>
+</div>
+} }

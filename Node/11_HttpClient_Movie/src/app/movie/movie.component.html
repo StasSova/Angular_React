@@ -1,0 +1,8 @@
+<div class="movie-card" (click)="onDetailCommand()">
+  <img class="movie-poster" [src]="movie.Poster" alt="{{ movie.Title }}" />
+  <div class="movie-info">
+    <h2 class="movie-title">{{ movie.Title }}</h2>
+    <p class="movie-year">Year: {{ movie.Year }}</p>
+    <p class="movie-type">Type: {{ movie.Type }}</p>
+  </div>
+</div>

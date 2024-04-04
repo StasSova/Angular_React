@@ -1,0 +1,5 @@
+@if (cocktails) { @for (item of cocktails | async; track $index) {
+<p>{{ item.title }}</p>
+<p>{{ item.volume }}</p>
+<p>{{ item.price | currency }}</p>
+} }

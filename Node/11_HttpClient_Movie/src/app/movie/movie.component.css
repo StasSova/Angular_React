@@ -1,0 +1,35 @@
+.movie-card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.movie-card:hover {
+  background-color: #f0f0f0;
+}
+
+.movie-poster {
+  width: 80px; /* Фиксированная ширина постера */
+  height: auto; /* Автоматическая высота */
+  margin-right: 10px;
+}
+
+.movie-info {
+  flex-grow: 1;
+}
+
+.movie-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.movie-year,
+.movie-type {
+  margin: 0;
+  font-size: 14px;
+}

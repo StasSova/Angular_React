@@ -1,0 +1,13 @@
+<div class="movie-details-container">
+  <div class="movie-poster">
+    <img [src]="movieDetails.Poster" alt="{{ movieDetails.Title }}" />
+  </div>
+  <div class="movie-info">
+    <h2 class="movie-title">{{ movieDetails.Title }}</h2>
+    <div class="movie-rating">Rating: No rating available</div>
+    <p class="movie-year">Year: {{ movieDetails.Year }}</p>
+    <p class="movie-genre">Genre: {{ movieDetails.Genre }}</p>
+    <p class="movie-director">Director: {{ movieDetails.Director }}</p>
+    <p class="movie-plot">Plot: {{ movieDetails.Plot }}</p>
+  </div>
+</div>

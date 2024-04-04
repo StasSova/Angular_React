@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="head">
+    <h1 class="title">HDRezka</h1>
+    <form [formGroup]="form" (ngSubmit)="getMovie()" class="search-bar">
+      <select formControlName="type" class="movie-type-select">
+        <option *ngFor="let type of movieTypes" [value]="type">
+          {{ type }}
+        </option>
+      </select>
+      <input
+        formControlName="title"
+        type="text"
+        placeholder="Enter movie title"
+        class="movie-title-input"
+      />
+      <button type="submit" class="search-button">Search</button>
+    </form>
+  </div>
+
+  <section class="movie-cont">
+    <div class="movie-list">
+      @if (moviesData) { @for (item of moviesData; track $index) {
+      <app-movie [movie]="item" (onDetail)="getDetail($event)"></app-movie>
+      } @empty {
+      <p>No movies found.</p>
+      } } @if (moviesData) {
+
+      <div class="pagination">
+        <button type="button" (click)="goToPreviousPage()">Previous</button>
+        <button
+          type="button"
+          *ngFor="let _ of pagesArray; let i = index"
+          (click)="getMovie(i + 1)"
+        >
+          {{ i + 1 }}
+        </button>
+        <button type="button" (click)="goToNextPage()">Next</button>
+      </div>
+      }
+    </div>
+
+    @if (selectedMovie) {
+    <div class="movie-det">
+      <app-movie-detail [movieDetails]="selectedMovie"></app-movie-detail>
+    </div>
+    }
+  </section>
+</div>

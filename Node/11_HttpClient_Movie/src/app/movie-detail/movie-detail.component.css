@@ -1,0 +1,32 @@
+.movie-details-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.movie-poster img {
+  width: 260px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.movie-info {
+  flex-grow: 1;
+}
+
+.movie-title {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.movie-rating {
+  font-weight: bold;
+  color: #777;
+}
+
+.movie-year,
+.movie-genre,
+.movie-director,
+.movie-plot {
+  margin: 5px 0;
+}
