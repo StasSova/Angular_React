@@ -1,0 +1,14 @@
+<p>location works!</p>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <input type="text" formControlName="name" />
+  <button type="submit">Add</button>
+</form>
+
+<div *ngFor="let location of locations; let ind = index">
+  <div class="item">
+    <p>{{ location.name }}</p>
+    <p (click)="changeWifi(location, ind)">{{ location.wifi }}</p>
+    <button (click)="onDelete(location)">Delete</button>
+  </div>
+</div>
