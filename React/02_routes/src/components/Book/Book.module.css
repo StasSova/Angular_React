@@ -1,0 +1,35 @@
+.bookContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.imageContainer {
+  flex: 0 0 200px;
+  margin-right: 20px;
+}
+
+.bookImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.descriptionContainer {
+  flex: 1;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 16px;
+}

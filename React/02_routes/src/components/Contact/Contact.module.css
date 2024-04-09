@@ -1,0 +1,27 @@
+/* Contact.module.css */
+
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contactTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contactTable th,
+.contactTable td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.contactTable th {
+  background-color: #f2f2f2;
+}
