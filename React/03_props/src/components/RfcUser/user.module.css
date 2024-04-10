@@ -1,0 +1,9 @@
+.user {
+  display: grid;
+  grid-template-columns: 50px 24px 24px;
+  gap: 24px;
+  padding: 8px 16px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  align-items: center;
+}

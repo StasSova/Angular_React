@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Book from "./components/Book/Book";
 
+// npm i react-router-dom --save
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
