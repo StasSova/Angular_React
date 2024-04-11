@@ -124,10 +124,69 @@ function CardList() {
       },
     },
   ];
-
+  let isValid = false;
+  let content;
   let collection = cards.map((el) => <Card card={el} />);
+  if (isValid) {
+    content = cards.map((el) => <Card card={el} />);
+  } else {
+    content = (
+      <h1
+        style={{
+          color: "black",
+        }}
+      >
+        Please, login in your account{" "}
+      </h1>
+    );
+  }
 
-  return <div className={css.card_container}>{collection}</div>;
+  return (
+    <>
+      <h1
+        style={{
+          color: "white",
+        }}
+      >
+        Collection 1
+      </h1>
+      <div className={css.card_container}>{content}</div>
+      <hr />
+      <h1
+        style={{
+          color: "white",
+        }}
+      >
+        Collection 2
+      </h1>
+      <div className={css.card_container}>
+        {isValid ? (
+          cards.map((el) => <Card card={el} />)
+        ) : (
+          <h1
+            style={{
+              color: "black",
+            }}
+          >
+            Please, login in your account{" "}
+          </h1>
+        )}
+      </div>
+      <hr />
+
+      <h1
+        style={{
+          color: "white",
+        }}
+      >
+        Collection 3
+      </h1>
+      <div className={css.card_container}>
+        {isValid && cards.map((el) => <Card card={el} />)}
+      </div>
+      <hr />
+    </>
+  );
 }
 
 export default CardList;
