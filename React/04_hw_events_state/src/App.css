@@ -1,0 +1,58 @@
+:root {
+  --bg-color-light: #f0f0f0;
+  --text-color-light: #333333;
+  --shadow-color-light: #d0d0d0;
+
+  --bg-color-dark: #333333;
+  --text-color-dark: #f0f0f0;
+  --shadow-color-dark: #222222;
+}
+
+.dark-mode {
+  --bg-color-light: #333333;
+  --text-color-light: #f0f0f0;
+  --shadow-color-light: #222222;
+
+  --bg-color-dark: #f0f0f0;
+  --text-color-dark: #333333;
+  --shadow-color-dark: #d0d0d0;
+}
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--bg-color-light);
+  transition: 0.3s ease;
+}
+
+.toggleSwitcher {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px var(--shadow-color-light),
+    -5px -5px 15px var(--bg-color-light);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggleSwitcher:hover {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+  box-shadow: 5px 5px 15px var(--shadow-color-dark),
+    -5px -5px 15px var(--bg-color-dark);
+}
+
+.toggleSwitcherContainer {
+  align-self: flex-end;
+  padding: 20px;
+}
+
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
