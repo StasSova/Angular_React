@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cont {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 64px;
+  padding: 5%;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+button {
+  flex: 1;
+}
+
+input.url {
+  width: 250px;
+}
