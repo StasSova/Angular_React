@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;
+  border: 1px solid gray;
+  height: 86px;
+  border-radius: 16px;
+  background-color: blanchedalmond;
+  transition: 0.3s ease;
+}
+
+.item:hover {
+  background-color: azure;
+  cursor: pointer;
+}
+
+.Link {
+  text-decoration: none;
+}
