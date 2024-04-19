@@ -21,3 +21,23 @@ button.primary {
   color: white;
   border-radius: 8px;
 }
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 32px;
+  gap: 32px;
+}
+header nav ul a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.3s ease-out;
+  font-size: 32px;
+  color: gray;
+}
+header nav ul a:hover {
+  color: darkblue;
+  text-decoration-color: gray;
+}

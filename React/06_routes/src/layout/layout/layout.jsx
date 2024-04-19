@@ -16,6 +16,9 @@ function Layout() {
             <li>
               <Link to="/About">About</Link>
             </li>
+            <li>
+              <Link to="/auth">Auth</Link>
+            </li>
           </ul>
         </nav>
       </header>

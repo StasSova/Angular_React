@@ -1,8 +1,8 @@
 import React from "react";
+import css from "./Layout_Admin.module.css";
 import { Link, Outlet } from "react-router-dom";
-import css from "./Layout_Home.module.css";
 
-function LayoutHome() {
+function Layout_Admin() {
   return (
     <>
       <header>
@@ -10,9 +10,6 @@ function LayoutHome() {
           <ul>
             <li>
               <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/auth/login">Auth</Link>
             </li>
           </ul>
         </nav>
@@ -25,4 +22,4 @@ function LayoutHome() {
   );
 }
 
-export default LayoutHome;
+export default Layout_Admin;

@@ -6,7 +6,8 @@ function ProductPage() {
   const { id } = useParams();
   console.log(id);
   console.log(typeof id);
-  const el = useProducts().find((el) => el.id === parseInt(id, 10));
+  const { products } = useProducts();
+  const el = products.find((el) => el.id === parseInt(id, 10));
 
   const { title, price } = el;
 

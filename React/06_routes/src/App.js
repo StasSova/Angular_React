@@ -9,6 +9,9 @@ import NotFound from "./components/notFound/notFound";
 import Layout from "./layout/layout/layout";
 import ProductPage from "./components/productPage/productPage";
 import { ProductProvider } from "./contexts/productsContext";
+import AuthLayout from "./layout/auth/authLayout";
+import Login from "./pages/login/login";
+import Register from "./pages/register/register";
 
 function App() {
   const router = createBrowserRouter([
@@ -43,7 +46,14 @@ function App() {
       ],
     },
 
-    {},
+    {
+      path: "/auth",
+      element: <AuthLayout />,
+      children: [
+        { path: "login", element: <Login /> },
+        { path: "register", element: <Register /> },
+      ],
+    },
   ]);
   return (
     <>
