@@ -4,11 +4,11 @@ import css from "./housingLocations.module.css";
 import Housing from "../housing/housing";
 
 function HousingLocations() {
-  const housingLocationsList = useLocations();
+  const { locations } = useLocations();
 
   return (
     <section className={css.results}>
-      {housingLocationsList.map((el) => (
+      {locations.map((el) => (
         <Housing key={el.id} housing={el} />
       ))}
     </section>

@@ -11,6 +11,7 @@ import Layout_Auth from "./layout/auth/Layout_Auth";
 import Login from "./pages/auth/login/login";
 import Register from "./pages/auth/register/register";
 import Layout_Admin from "./layout/admin/Layout_Admin";
+import Admin from "./pages/admin/admin";
 
 function App() {
   const router = createBrowserRouter([
@@ -51,8 +52,12 @@ function App() {
     */
     {
       path: "/admin",
-      element: <Layout_Admin />,
-      children: [],
+      element: (
+        <LocationProvider>
+          <Layout_Admin />
+        </LocationProvider>
+      ),
+      children: [{ path: "list", element: <Admin /> }],
     },
   ]);
   return <RouterProvider router={router} />;

@@ -6,7 +6,9 @@ import css from "./details.module.css";
 
 function Details() {
   const { id } = useParams();
-  const housing = useLocations().find((el) => el.id === parseInt(id, 10));
+  const { locations } = useLocations();
+
+  const housing = locations.find((el) => el.id === parseInt(id, 10));
   const { photo, name, state, city, availableUnits, wifi, laundry } = housing;
   return (
     <article>

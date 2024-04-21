@@ -14,6 +14,9 @@ function LayoutHome() {
             <li>
               <Link to="/auth/login">Auth</Link>
             </li>
+            <li>
+              <Link to="/admin/list">Admin</Link>
+            </li>
           </ul>
         </nav>
       </header>

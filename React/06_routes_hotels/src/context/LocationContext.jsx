@@ -1,9 +1,9 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const LocationContext = createContext();
 
 export const LocationProvider = ({ children }) => {
-  const locations = [
+  const [locations, setLocations] = useState([
     {
       id: 0,
       name: "Acme Fresh Start Housing",
@@ -114,10 +114,30 @@ export const LocationProvider = ({ children }) => {
       wifi: true,
       laundry: true,
     },
-  ];
+  ]);
+
+  const addLocation = (location) => {
+    setLocations((prevLocations) => [...prevLocations, location]);
+  };
+
+  const deleteLocation = (id) => {
+    setLocations((prevLocations) =>
+      prevLocations.filter((location) => location.id !== id)
+    );
+  };
+
+  const updateLocation = (updatedLocation) => {
+    setLocations((prevLocations) =>
+      prevLocations.map((location) =>
+        location.id === updatedLocation.id ? updatedLocation : location
+      )
+    );
+  };
 
   return (
-    <LocationContext.Provider value={locations}>
+    <LocationContext.Provider
+      value={{ locations, addLocation, deleteLocation, updateLocation }}
+    >
       {children}
     </LocationContext.Provider>
   );
