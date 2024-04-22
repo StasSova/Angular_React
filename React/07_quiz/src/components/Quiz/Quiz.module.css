@@ -1,0 +1,34 @@
+.quiz {
+  padding: 48px;
+}
+.question {
+  border: 1px solid gray;
+  margin-bottom: 24px;
+
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.question.error {
+  border-color: red;
+}
+
+.question.correct {
+  border-color: green;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 24px;
+}
+
+li .correct {
+  color: green;
+}
+
+li .error {
+  color: red;
+}
